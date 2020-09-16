@@ -28,6 +28,8 @@ function preload() {
 function setup() {
   let cnv = createCanvas(800, 600);
   cnv.parent("canvasContainer");
+  document.getElementById('canvasContainer').style.display = 'none';
+  document.getElementById('result-section').style.display = 'none';
   // Create the video
   video = createCapture(VIDEO);
   video.size(800, 580);
@@ -69,3 +71,10 @@ function gotResult(error, results) {
   // Classifiy again!
   classifyVideo();
 }
+
+document.getElementById('createCanvas').onclick=function(){
+  // Remove any element-specific value, falling back to stylesheets
+  document.getElementById('canvasContainer').style.display='';
+  document.getElementById('result-section').style.display='';
+  document.getElementById('createCanvas').style.display='none';
+};
