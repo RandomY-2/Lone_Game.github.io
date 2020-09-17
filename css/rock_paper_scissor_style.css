@@ -33,7 +33,7 @@ canvas {
     display: block;
 }
 
-#createCanvas {
+.button-section {
     margin: auto;
     display: block;
     text-align: center;

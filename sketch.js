@@ -30,6 +30,9 @@ function setup() {
   cnv.parent("canvasContainer");
   document.getElementById('canvasContainer').style.display = 'none';
   document.getElementById('result-section').style.display = 'none';
+  document.getElementById('playGame').style.display = 'none';
+  document.getElementById('playerShape').style.display = 'none';
+  document.getElementById('computerShape').style.display = 'none';
   // Create the video
   video = createCapture(VIDEO);
   video.size(800, 580);
@@ -68,6 +71,8 @@ function gotResult(error, results) {
   // The results are in an array ordered by confidence.
   // console.log(results[0]);
   label = results[0].label;
+  var playerShapeText = document.getElementById('playerShape');
+  playerShapeText.innerText = "Your Shape: " + results[0].label;
   // Classifiy again!
   classifyVideo();
 }
@@ -76,5 +81,12 @@ document.getElementById('createCanvas').onclick=function(){
   // Remove any element-specific value, falling back to stylesheets
   document.getElementById('canvasContainer').style.display='';
   document.getElementById('result-section').style.display='';
+  document.getElementById('playGame').style.display=''; 
+  document.getElementById('playerShape').style.display = '';
+  document.getElementById('computerShape').style.display = '';
   document.getElementById('createCanvas').style.display='none';
 };
+
+document.getElementById('playGame').onclick=function() {
+  
+}
