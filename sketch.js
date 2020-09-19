@@ -20,6 +20,8 @@ let flippedVideo;
 // To store the classification
 let label = "";
 
+let choices = ["Rock", "Paper", "Scissor"];
+
 // Load the model first
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL);
@@ -88,5 +90,7 @@ document.getElementById('createCanvas').onclick=function(){
 };
 
 document.getElementById('playGame').onclick=function() {
-  
+    var index = Math.floor(Math.random() * Math.floor(3)) + 1;
+    var computerShapeText = document.getElementById('computerShape');
+    computerShapeText.innerText = "Computer's Shape: " + choice[index];
 }
