@@ -22,6 +22,11 @@ let label = "";
 
 let choices = ["Rock", "Paper", "Scissor"];
 
+var keyPressed = false;
+
+var userFinalShape = "";
+var computerFinalShape = "";
+
 // Load the model first
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL);
@@ -74,7 +79,9 @@ function gotResult(error, results) {
   // console.log(results[0]);
   label = results[0].label;
   var playerShapeText = document.getElementById('playerShape');
-  playerShapeText.innerText = "Your Shape: " + results[0].label;
+  if (!keyPressed) {
+    playerShapeText.innerText = "Your Shape: " + results[0].label; 
+  }
   // Classifiy again!
   classifyVideo();
 }
@@ -89,8 +96,60 @@ document.getElementById('createCanvas').onclick=function(){
 };
 
 document.getElementById('playGame').onclick=function() {
-    var index = Math.floor(Math.random() * Math.floor(3));
+    keyPressed = !keyPressed;
     var computerShapeText = document.getElementById('computerShape');
-    computerShapeText.innerText = "Computer's Shape: " + choices[index];
+    var resText = document.getElementById('resultText');
     
+    if (!keyPressed) {
+        computerShapeText.innerText = "Computer's Shape: ???";
+        resText.innerText = "Result: ";
+    } else {
+        var index = Math.floor(Math.random() * Math.floor(3));
+        computerShapeText.innerText = "Computer's Shape: " + choices[index];
+        var playerFinalText = document.getElementById('playerShape').innerText;
+        userFinalShape = playerFinalText.substring(12, playerFinalText.length);
+        computerFinalShape = choices[index];
+
+        if (userFinalShape === "Rock") {
+            if (computerFinalShape === "Rock") {
+                resText.innerText = "Result: Tie";
+            }
+
+            if (computerFinalShape === "Paper") {
+                resText.innerText = "Result: Computer Wins";
+            }
+
+            if (computerFinalShape === "Scissor") {
+                resText.innerText = "Result: You Win";
+            }
+        }
+
+        if (userFinalShape === "Paper") {
+            if (computerFinalShape === "Rock") {
+                resText.innerText = "Result: You Win";
+            }
+
+            if (computerFinalShape === "Paper") {
+                resText.innerText = "Result: Tie";
+            }
+
+            if (computerFinalShape === "Scissor") {
+                resText.innerText = "Result: Computer Wins";
+            }
+        }
+
+        if (userFinalShape === "Scissor") {
+            if (computerFinalShape === "Rock") {
+                resText.innerText = "Result: Computer Wins";
+            }
+
+            if (computerFinalShape === "Paper") {
+                resText.innerText = "Result: You Win";
+            }
+
+            if (computerFinalShape === "Scissor") {
+                resText.innerText = "Result: Tie";
+            }
+        }
+    }
 }
