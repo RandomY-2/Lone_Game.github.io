@@ -80,7 +80,6 @@ function gotResult(error, results) {
 }
 
 document.getElementById('createCanvas').onclick=function(){
-  // Remove any element-specific value, falling back to stylesheets
   document.getElementById('canvasContainer').style.display='';
   document.getElementById('result-section').style.display='';
   document.getElementById('playGame').style.display=''; 
@@ -90,7 +89,8 @@ document.getElementById('createCanvas').onclick=function(){
 };
 
 document.getElementById('playGame').onclick=function() {
-    var index = Math.floor(Math.random() * Math.floor(3)) + 1;
+    var index = Math.floor(Math.random() * Math.floor(3));
     var computerShapeText = document.getElementById('computerShape');
-    computerShapeText.innerText = "Computer's Shape: " + choice[index];
+    computerShapeText.innerText = "Computer's Shape: " + choices[index];
+    
 }
