@@ -138,7 +138,7 @@ document.getElementById('playGame').onclick=function() {
             }
         }
 
-        if (userFinalShape === "Scissor") {
+        if (userFinalShape === "Scissors") {
             if (computerFinalShape === "Rock") {
                 resText.innerText = "Result: Computer Wins";
             }
