@@ -87,12 +87,13 @@ function gotResult(error, results) {
 }
 
 document.getElementById('createCanvas').onclick=function(){
-  document.getElementById('canvasContainer').style.display='';
-  document.getElementById('result-section').style.display='';
-  document.getElementById('playGame').style.display=''; 
-  document.getElementById('playerShape').style.display = '';
-  document.getElementById('computerShape').style.display = '';
-  document.getElementById('createCanvas').style.display='none';
+    document.getElementById('canvasContainer').style.display='';
+    document.getElementById('result-section').style.display='';
+    document.getElementById('playGame').style.display=''; 
+    document.getElementById('playerShape').style.display = '';
+    document.getElementById('computerShape').style.display = '';
+    document.getElementById('createCanvas').style.display='none';
+    document.getElementById('rock_footer').classList.remove('fixed-bottom');
 };
 
 document.getElementById('playGame').onclick=function() {
