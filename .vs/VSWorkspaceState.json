@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\img"
+    "\\rock_paper_scissors",
+    "\\voice_snake_game"
   ],
-  "SelectedNode": "\\rock_paper_sicssors.html",
+  "SelectedNode": "\\rock_paper_scissors\\rock_paper_scissor_CV.js",
   "PreviewInSolutionExplorer": false
 }
