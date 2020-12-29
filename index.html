@@ -11,8 +11,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     </head>
-    
-    
+ 
     
     <body>
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
@@ -36,21 +35,15 @@
             </div>
         </nav>
         
-        <header  class="jumbotron bg-dark">
-            <div class="container">
-                <div class="row row-header">
-                    <div class="col-12 col-sm-6 align-self-center">
-                        <h1>What is this website?</h1>
-                        <p>This website contains a series of games that you can play by yourself whenever you feel bored!</p>
-                    </div>
-                    <div class="col-12 col-sm-6 align-self-center">
-                        <!-- remember to put a logo here -->
-                    </div>
-                </div>
+        <div id="welcomeSection" class="welcomeContainer welcome-container">
+            <div class="welcome-Info">
+                <h1 class="welcome-Info-Heading">Welcome to Web AI Game</h1>
+                <p class="welcome-Info-Subheading">where you can play interactive games with an AI using your camera</p>
+                <a href="#game-start-id" type="button" class="welcome-Info-Button">Show Me The Games</a>
             </div>
-        </header>
+        </div>
         
-        <div class="container">
+        <div class="game-list container" id="game-start-id">
             <div class="row">
                 <div class="col-12">
                     <h3>Games You Can Play: </h3>
@@ -60,7 +53,7 @@
             
             <div class="row">
                 <div  class="col-sm-6">
-                    <h2><a href="rock_paper_sicssors.html">Rock Paper Scissors</a></h2>
+                    <h2><a  href="rock_paper_sicssors.html">Rock Paper Scissors</a></h2>
                     <p>Rock paper scissors (also known by other permutations such as scissors paper rock, scissors paper stone, paper rock scissors, or ro-sham-bo) is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). "Scissors" is identical to the two-fingered V sign (also indicating "victory" or "peace") except that it is pointed horizontally instead of being held upright in the air. A simultaneous, zero-sum game, it has only two possible outcomes: a draw, or a win for one player and a loss for the other.</p>
                     <footer class="blockquote-footer">
                             <cite title="Source Title"><a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">Wikipedia</a></cite>
@@ -68,7 +61,7 @@
                 </div>
                 <div class="col-sm">
                     <div class="card">
-                        <h3 class="card-header bg-primary text-white">Outcomes:</h3>
+                        <h3 class="card-header bg-dark text-white">Outcomes:</h3>
                         <div class="card-body align-self-center">
                             <img src="img/rock_paper_scissor_outcomes.png" width="250" height="250">
                         </div>
@@ -84,8 +77,8 @@
             <br>
             <br>
             
-            <div class="row">
-                <div class="col-8 offset-3">
+            <div class="TBD-list row">
+                <div class="col-12">
                     <h2>More games to be continued...</h2>
                 </div>
             </div>
@@ -106,7 +99,7 @@
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Menu</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="home.html">Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li>
                             <a href="rock_paper_sicssors.html">Rock Paper Scissors</a>

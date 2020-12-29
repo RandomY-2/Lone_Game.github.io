@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
 row-header {
-    margin: 0px auto;
-    padding: 0px auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 .row-content {
@@ -10,21 +27,81 @@ row-header {
     min-height: 400px;
 }
 
-body {
-    padding: 50px 0px 0px 0px;
-    z-index: 0;
+/* ///////////////////////////// Welcome Page /////////////////////////////// */
+.welcome-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.welcomeContainer {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.welcomeContainer .welcome-Info {
+    width: 100%;
+    text-align: center;
+}
+
+.welcomeContainer .welcome-Info .welcome-Info-Heading {
+    font-size: 5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.welcomeContainer .welcome-Info .welcome-Info-Subheading {
+    font-size: 2rem;
+    font-weight: 200;
+    color: white;
+}
+
+.welcomeContainer .welcome-Info .welcome-Info-Button {
+    margin-top: 30px;
+    padding: 2rem 5rem;
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+/* ///////////////////////////////// Nav Bar /////////////////////////////// */
 .navbar-dark {
-    background-color:cornflowerblue;
+    background-color: black;
 }
 
-.jumbotron {
-    padding: 70px 30px 70px 30px;
-    margin: 0px auto;
-    color: floralwhite;
+.nav-link {
+    font-size: 1.75rem;
 }
 
+
+/* ///////////////////////////////// Game List /////////////////////////////// */
+.game-list {
+    margin: 10px;
+    display: block;
+    font-size: 15px;
+}
+
+.game-list h3 {
+    font-size: 25px;
+}
+
+.TBD-list {
+    text-align: center;
+}
+
+/* ///////////////////////////////// Footer /////////////////////////////// */
 .page-footer {
     background-color: beige;
     margin: 0;
