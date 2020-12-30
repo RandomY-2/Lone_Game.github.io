@@ -50,9 +50,6 @@ canvas {
     display: block;
 }
 
-.button-section {
-    margin: auto;
-    display: block;
+.game-score {
     text-align: center;
-    font-size: 25px;
 }
