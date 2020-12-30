@@ -50,14 +50,14 @@ function foodLocation() {
     food = createVector(x, y);
 }
 
-function keyPressed() {
-    if (keyCode === LEFT_ARROW) {
+function controlSnake(label) {
+    if (label === "Left") {
         snake.setDir(-1, 0);
-    } else if (keyCode === RIGHT_ARROW) {
+    } else if (label === "Right") {
         snake.setDir(1, 0);
-    } else if (keyCode === UP_ARROW) {
+    } else if (label === "UP") {
         snake.setDir(0, -1);
-    } else if (keyCode === DOWN_ARROW) {
+    } else if (label === "Down") {
         snake.setDir(0, 1);
     }
 }
@@ -101,5 +101,5 @@ function gotResult(error, results) {
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
     label = results[0].label;
-    console.log(label);
+    controlSnake(label);
 }

@@ -53,3 +53,12 @@ canvas {
 .game-score {
     text-align: center;
 }
+
+.info-section {
+    font-size: 1.5rem;
+}
+
+.rules {
+    position: relative;
+    left: 15px;
+}
