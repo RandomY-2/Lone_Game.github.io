@@ -6,7 +6,7 @@ This website includes a series of games that the user can play with an AI. Curre
 
 Github Page: https://randomy-2.github.io/Web_AI_Game.github.io/
 
-## Reach Version
+## React Version
 
 I have also created a React version of the website(https://github.com/RandomY-2/React_Web_AI_Game). The layout is also accomplished using React Bootstrap. However, since p5 ml5 library is currently not supported, the actual games cannot be migrated currently. I am looking at ways to use Tensorflow.js in React application. 
 
