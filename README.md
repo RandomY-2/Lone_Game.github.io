@@ -1,10 +1,14 @@
-# Web_AI_Game
+# Lone Game
 
 ## Description 
 
 This website includes a series of games that the user can play with an AI. Currently the avaliable games are rock paper scissors that the user can play using camera and snake game using voice control. The UI is done using HTML, CSS, Bootstrap 4, and font-awesome toolkit. The machine learning models are created using Google's Teachable Machine platform and connected to the website using Javascript and p5 ml5 library. 
 
-Github Page: https://randomy-2.github.io/Web_AI_Game.github.io/
+Github Page: https://randomy-2.github.io/Lone_Game.github.io/
+
+## React Version
+
+I am currently transitting the project into React-based and using tensorflow.js for deploying machine learning models.
 
 ## Rock Paper Scissors
 
